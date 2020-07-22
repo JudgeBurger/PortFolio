@@ -1,11 +1,13 @@
+@import "vars";
+@import "~bootstrap/scss/bootstrap";
+
 body, html {
     margin     : 0;
     font       : bold 14px/1.4 'Open Sans', arial, sans-serif;
-    background : #000;
+    background : $color-home;
 }
 
 ul {
-    margin     : 150px auto 0;
     padding    : 0;
     list-style : none;
     display    : table;
@@ -20,7 +22,7 @@ li {
 }
 
 a {
-    color           : #fff;
+    color           : #000;
     text-transform  : uppercase;
     text-decoration : none;
     letter-spacing  : 0.15em;
@@ -28,6 +30,11 @@ a {
     display         : inline-block;
     padding         : 15px 20px;
     position        : relative;
+
+    &:hover {
+        text-decoration : none;
+        color           : black;
+    }
 }
 
 a:after {
@@ -37,7 +44,7 @@ a:after {
     height     : 2px;
     left       : 50%;
     position   : absolute;
-    background : #fff;
+    background : #000;
     transition : width 0.3s ease 0s, left 0.3s ease 0s;
     width      : 0;
 }
