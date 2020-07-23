@@ -20,7 +20,7 @@ class ProjectsRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return Projects[] Returns an array of Projects objects
+    //  * @return ProjectsFixtures[] Returns an array of ProjectsFixtures objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class ProjectsRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Projects
+    public function findOneBySomeField($value): ?ProjectsFixtures
     {
         return $this->createQueryBuilder('p')
             ->andWhere('p.exampleField = :val')
