@@ -1,17 +1,11 @@
 <nav class="navbar">
     <div class="d-flex justify-content-between align-items-center p-0 w-100">
         <div class="logo">
-            <a class="img_home" href="{{ path('home') }}">
+            <a class="img_home" href="{{ path('admin_new') }}">
                 <img src="{{ asset('build/mon_avatar.png') }}" alt="mon_avatar">
             </a>
         </div>
         <ul class="ml-auto">
-            <li>
-                <a class="underline" href="https://www.linkedin.com/in/damien-carli-032588113/" target="_blank">
-                    <i class="far fa-address-card"></i>
-                    A Propos
-                </a>
-            </li>
             <li>
                 <a class="underline" href="{{ path('projects_index') }}">
                     <i class="far fa-folder-open"></i>
@@ -19,9 +13,15 @@
                 </a>
             </li>
             <li>
-                <a class="underline" href="#">
+                <a class="underline" href="https://www.linkedin.com/in/damien-carli-032588113/" target="_blank">
+                    <i class="far fa-address-card"></i>
+                    À Propos
+                </a>
+            </li>
+            <li>
+                <a class="underline" href="{{ path('contact_index') }}">
                     <i class="far fa-envelope"></i>
-                    Contact
+                    Me Contacter
                 </a>
             </li>
         </ul>
