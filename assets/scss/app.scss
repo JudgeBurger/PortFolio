@@ -7,6 +7,10 @@ body, html {
     background : $color-home;
 }
 
+.img_home {
+    max-width: 800px;
+}
+
 ul {
     padding    : 0;
     list-style : none;
@@ -16,7 +20,7 @@ ul {
 }
 
 #projects_language input[type="radio"] {
-    margin-left : 10px;
+    margin-left  : 10px;
     margin-right : 8px;
 
 }
@@ -236,6 +240,25 @@ body {
         outline        : 1px dashed yellow;
         outline-offset : 3px;
     }
+}
+
+.btn-connection {
+    border           : none;
+    background-color : $color-home;
+
+    &:hover {
+        background : none;
+        color      : $color-home;
+        border     : none;
+    }
+
+    &:active {
+        border        : none;
+        color         : $color-home;
+        background    : none;
+        outline-style : none;
+    }
+
 }
 
 @media (hover : hover) and (min-width : $bp-md) {
