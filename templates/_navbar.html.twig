@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light w-100">
-    <div class="container mt-5">
+    <div class="container">
         <!-- LOGIN MODAL TRIGGER -->
-        <button class="btn" data-toggle="modal" data-target="#loginModal">
+        <button class="btn-connection" data-toggle="modal" data-target="#loginModal">
             <img src="{{ asset('build/mon_avatar.png') }}" alt="mon_avatar">
         </button>
 
@@ -11,6 +11,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Espace personnel</h5>
+
                         <button class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
@@ -25,8 +26,12 @@
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" data-dismiss="modal">Valider</button>
+                    <div class="modal-footer d-flex justify-content-around">
+                        {% if app.user %}
+                        <a href="{{ path('app_login') }}" class="" data-dismiss="modal">Connexion</a>
+                        {% else %}
+                        <a href="{{ path('app_logout') }}" class="" data-dismiss="modal">Déconnexion</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
