@@ -28,7 +28,7 @@ class Projects
     private $language;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $conditions;
 
@@ -71,7 +71,7 @@ class Projects
         return $this->conditions;
     }
 
-    public function setConditions(string $conditions): self
+    public function setConditions(?string $conditions): self
     {
         $this->conditions = $conditions;
 

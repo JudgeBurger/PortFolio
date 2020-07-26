@@ -28,15 +28,32 @@ class ProjectsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom')
+            ->add('nom', TextType::class, [
+                'attr' => ['class' => 'form-control'],
+            ])
             ->add('language', ChoiceType::class, [
                 'choices' => [
                     'Langages' => self::LANGUAGES
                 ],
-                'attr' => ['class' => 'd-flex flex-column my-3 col-12 p-0']
+                'attr' => ['class' => 'form-control'],
+                'expanded' => 'true',
             ])
-            ->add('conditions', TextType::class)
-            ->add('Description', TextareaType::class)
+            ->add('conditions', TextType::class, [
+                'attr' => [
+                    'class' => 'form-control',
+                ],
+                'required' => false,
+
+
+
+            ])
+            ->add('Description', TextareaType::class, [
+                'attr' => [
+                    'class' => 'form-control',
+                    'rows' => 6
+                ],
+
+            ])
         ;
     }
 

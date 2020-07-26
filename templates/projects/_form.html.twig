@@ -1,21 +1,21 @@
 {{ form_start(form) }}
-<div class="row">
-    <div class="col-12 p-0 d-flex justify-content-center align-items-center">
         {{ form_start(form) }}
         <div class="m-5">
             <div class="mt-5">
                 {{ form_row(form.nom) }}
             </div>
-            <div class="mt-5 col-md-6">
+            <div class="mt-5">
                 {{ form_row(form.language) }}
             </div>
             <div class="mt-5">
                 {{ form_row(form.conditions) }}
             </div>
             <div class="mt-5">
+                {{ form_row(form.Description) }}
+            </div>
+            <div class="mt-5">
+                <button class="btn">{{ button_label|default('Enregistrer') }}</button>
                 {{ form_end(form) }}
             </div>
         </div>
-    </div>
-    <button class="btn">{{ button_label|default('Save') }}</button>
 
