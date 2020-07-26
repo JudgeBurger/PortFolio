@@ -6,15 +6,21 @@
 
 {% block body %}
     {% for project in projects %}
-    <div class="wrap">
-        <div class="tile col-12 p-0 mb-5">
-            <img class="h-100" src='https://images.unsplash.com/photo-1464054313797-e27fb58e90a9?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=996&q=80'/>
-            <div class="text">
-                <h1>{{ project.nom }}</h1>
-                <h2 class="animate-text">{{ project.conditions }} - {{ project.language }} </h2>
-                <p class="animate-text">{{ project.description }}</p>
+        <main class="page-content container-fluid">
+            <div class="row"></div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">{{ project.nom }}</h2>
+                    <h4 class="">{{ project.conditions }}</h4>
+                    <p class="copy">{{ project.description }}</p>
+                    <a href="{{ path('projects_edit', {'id': project.id}) }}" class="btn">Modifier</a>
                 </div>
             </div>
-        </div>
+        </main>
     {% endfor %}
+    <div>
+        <div>
+            <a class="btn btn-lg btn-outline-dark mb-5" href="{{ path('home') }}">Retour a la page d'accueil</a>
+        </div>
+    </div>
 {% endblock %}
