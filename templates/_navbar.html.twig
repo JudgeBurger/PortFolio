@@ -1,13 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light w-100">
-    {% if app.user %}
-    <a class="navbar-brand" href="{{ path('app_logout') }}">
+    <a class="navbar-brand" href="{{ path('projects_new') }}">
         <img src="{{ asset('build/mon_avatar.png') }}" alt="mon_avatar">
     </a>
-    {% else %}
-    <a class="navbar-brand" href="{{ path('app_login') }}">
-        <img src="{{ asset('build/mon_avatar.png') }}" alt="mon_avatar">
-    </a>
-    {% endif %}
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
